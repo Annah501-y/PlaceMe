@@ -1,78 +1,131 @@
+
+/*
+ Purpose:
+Provide secondary navigation, company information, contact
+details, and social media links.
+*/
+import {
+  
+  Mail,
+  Phone,
+  MapPin,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 
-function Footer() {
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="bg-gray-900 text-gray-300">
-      <div className="mx-auto max-w-7xl px-6 py-12">
-        
-        {/* Footer content */}
-        <div className="grid gap-10 md:grid-cols-3">
 
-          {/* Brand */}
+      <div className="max-w-7xl mx-auto px-6 py-16">
+
+        {/* Footer Grid */}
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+
+          {/* Company Information */}
           <div>
-            <h2 className="text-2xl font-bold text-orange-500">
-              PlaceMe
-            </h2>
+            <h3 className="text-2xl font-bold text-orange-500">
+              Foodie
+            </h3>
 
-            <p className="mt-4 text-sm leading-6">
-              Fast, reliable food delivery that connects you with your
-              favorite restaurants anytime, anywhere.
+            <p className="mt-4 text-sm leading-relaxed">
+              Bringing your favorite meals directly to your doorstep.
+              Fast, reliable, and convenient food delivery.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="mb-4 text-lg font-semibold text-white">
+            <h4 className="text-lg font-semibold text-white mb-4">
               Quick Links
-            </h3>
+            </h4>
 
-            <ul className="space-y-2">
+            <ul className="space-y-3 text-sm">
               <li>
-                <Link to="/" className="hover:text-orange-500">
+              <Link
+                to="/" className="hover:text-orange-500 transition">
                   Home
-                </Link>
+              </Link>
               </li>
-
               <li>
-                <Link to="/restaurants" className="hover:text-orange-500">
+              <Link
+                  to="/restaurants"
+                  className="hover:text-orange-500 transition">
                   Restaurants
-                </Link>
+              </Link>
               </li>
-
-              <li>
-                <Link to="/orders" className="hover:text-orange-500">
-                  Orders
-                </Link>
+                    <li>
+              <Link
+               to="/about"
+                  className="hover:text-orange-500 transition" >
+                  About Us
+              </Link>
               </li>
-
               <li>
-                <Link to="/cart" className="hover:text-orange-500">
-                  Cart
-                </Link>
+              <Link
+                  to="/contact"
+                  className="hover:text-orange-500 transition">
+                  Contact
+              </Link>
               </li>
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Contact Information */}
           <div>
-            <h3 className="mb-4 text-lg font-semibold text-white">
+            <h4 className="text-lg font-semibold text-white mb-4">
               Contact
-            </h3>
+            </h4>
 
-            <p>Email: support@placeme.com</p>
-            <p>Phone: 0618770830</p>
-            <p>Dar es Salaam, Tanzania</p>
+            <div className="space-y-3 text-sm">
+
+              <div className="flex items-center gap-2">
+                <Phone size={16} />
+                <span>+255 700 000 000</span>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <Mail size={16} />
+                <span>support@foodie.com</span>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <MapPin size={16} />
+                <span>Dar es Salaam, Tanzania</span>
+              </div>
+
+            </div>
+          </div>
+
+          {/* Social Media */}
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-4">
+              Follow Us
+            </h4>
+
+            <div className="flex gap-4">
+
+              
+
+            </div>
           </div>
 
         </div>
 
-        {/* Copyright */}
-        <div className="mt-10 border-t border-gray-700 pt-6 text-center text-sm">
-          © {new Date().getFullYear()} PlaceMe. All rights reserved.
+        {/* Footer Bottom */}
+        <div className="mt-12 border-t border-gray-800 pt-6 text-center text-sm">
+
+          <p>
+            © {currentYear} Foodie. All rights reserved.
+          </p>
+
         </div>
+
       </div>
+
     </footer>
   );
-}
+};
 
 export default Footer;

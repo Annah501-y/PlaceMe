@@ -5,6 +5,8 @@ import PopularMeals from "../../component/home/PopularMeals";
 import WhyChooseUs from "../../component/home/WhyChooseUs";
 import Testimonials from "../../component/home/Testimonials";
 import DownloadApp from "../../component/home/DownloadApp";
+import CTA from "../../component/home/CTA";
+import Footer from "../../component/layout/Footer";
 
 function Home() {
   return (
@@ -17,6 +19,8 @@ function Home() {
       <WhyChooseUs/>
       <Testimonials/>
       <DownloadApp/>
+      <CTA/>
+      
     </>
   );
 }
