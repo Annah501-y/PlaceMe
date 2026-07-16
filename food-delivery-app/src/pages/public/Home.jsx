@@ -19,8 +19,7 @@ function Home() {
       <WhyChooseUs/>
       <Testimonials/>
       <DownloadApp/>
-      <CTA/>
-      
+      <CTA/> 
     </>
   );
 }
